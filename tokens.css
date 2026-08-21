@@ -1,0 +1,57 @@
+:root {
+  --color-paper: oklch(98% 0.006 240);
+  --color-paper-raised: oklch(95% 0.008 240);
+  --color-paper-code: oklch(22% 0.012 240);
+  --color-ink: oklch(19% 0.012 240);
+  --color-ink-inverse: oklch(96% 0.006 240);
+  --color-muted: oklch(47% 0.014 240);
+  --color-rule: oklch(83% 0.01 240);
+  --color-rule-strong: oklch(63% 0.015 240);
+  --color-accent: oklch(49% 0.15 250);
+  --color-focus: oklch(58% 0.19 250);
+  --color-critical: oklch(43% 0.16 28);
+  --color-high: oklch(48% 0.14 55);
+  --color-medium: oklch(45% 0.1 95);
+  --color-review: oklch(43% 0.07 250);
+
+  --font-display: "Avenir Next", "Helvetica Neue", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Avenir Next", "Helvetica Neue", ui-sans-serif, system-ui, sans-serif;
+  --font-outlier: "SFMono-Regular", Consolas, ui-monospace, monospace;
+
+  --space-3xs: 0.125rem;
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2.5rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+  --space-4xl: 9rem;
+
+  --text-xs: 0.72rem;
+  --text-sm: 0.84rem;
+  --text-base: 1rem;
+  --text-md: 1.25rem;
+  --text-lg: 1.5625rem;
+  --text-xl: 1.953rem;
+  --text-2xl: 2.441rem;
+  --text-3xl: 3.052rem;
+  --text-display: clamp(3rem, 11vw, 7rem);
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-micro: 120ms;
+  --dur-short: 220ms;
+  --dur-long: 420ms;
+
+  --rule-thin: 1px;
+  --rule-strong: 2px;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-pill: 999rem;
+  --page-gutter: clamp(1rem, 4vw, 4rem);
+  --page-max: 88rem;
+  --measure: 68ch;
+}

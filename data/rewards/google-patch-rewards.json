@@ -1,0 +1,837 @@
+{
+  "schema": "patch-lab/reward-scope/v1",
+  "program": {
+    "id": "google-patch-rewards",
+    "title": "Google Open Source Security Patch Rewards",
+    "mode": "merged-security-patch",
+    "programUrl": "https://bughunters.google.com/open-source-security/patch-rewards",
+    "scopeUrl": "https://raw.githubusercontent.com/google/bughunters/main/patch-rewards-program/scope.md",
+    "policyCheckedAt": "2026-08-20",
+    "rewards": [
+      {
+        "id": "small",
+        "label": "Smaller security improvement",
+        "amountUsd": 500
+      },
+      {
+        "id": "modest",
+        "label": "Modest or speculative improvement",
+        "amountUsd": 2000
+      },
+      {
+        "id": "moderate",
+        "label": "Compelling, moderately complex improvement",
+        "amountUsd": 7500
+      },
+      {
+        "id": "high-impact",
+        "label": "Complicated, high-impact improvement",
+        "amountUsd": 15000
+      }
+    ],
+    "multipliers": [
+      {
+        "id": "tier1-memory-safety",
+        "multiplier": 2,
+        "endsOn": "2026-12-31",
+        "condition": "Qualifying secure-by-design memory-safety improvement in a tier 1 project"
+      },
+      {
+        "id": "tier1-parser-memory-safety",
+        "multiplier": 3,
+        "endsOn": "2026-12-31",
+        "condition": "Qualifying secure-by-design memory-safety improvement in a tier 1 core infrastructure data parser"
+      }
+    ]
+  },
+  "source": {
+    "url": "https://raw.githubusercontent.com/google/bughunters/main/patch-rewards-program/scope.md",
+    "retrievedAt": "2026-08-21T17:04:53.549Z",
+    "publishedDateClaim": "2025-01-09",
+    "sha256": "fe00370c59a0f65b251fd197c96765be22c1a21ce05f4bd6ede0eaa592c4b505",
+    "rawMarkdown": "# Patch Rewards Program Scope\n\nLast updated: 2025-01-09\n\nFor additional information: https://bughunters.google.com/open-source-security/patch-rewards\n\nCurrently, the projects in-scope are as follows:\n\n## Tier 1\n\nPackage                                                                                        | Month Added     | Area\n---------------------------------------------------------------------------------------------- | --------------- | ----\n[libjpeg](https://libjpeg.sourceforge.net/)                                                    | Prior to 1/2025 | Core infrastructure data parsers\n[libjpeg-turbo](https://github.com/libjpeg-turbo/libjpeg-turbo)                                | Prior to 1/2025 | Core infrastructure data parsers\n[libpng](https://github.com/pnggroup/libpng)                                                   | Prior to 1/2025 | Core infrastructure data parsers\n[giflib](https://giflib.sourceforge.net/)                                                      | Prior to 1/2025 | Core infrastructure data parsers\n[zlib](https://zlib.net/)                                                                      | Prior to 1/2025 | Core infrastructure data parsers\n[libxml2](https://gitlab.gnome.org/GNOME/libxml2)                                              | Prior to 1/2025 | Core infrastructure data parsers\n[protobuf](https://github.com/protocolbuffers/protobuf)                                        | 1/2025          | Core infrastructure data parsers\n[flatbuffers](https://github.com/google/flatbuffers)                                           | 1/2025          | Core infrastructure data parsers\n[grpc_proto](https://github.com/grpc/grpc-proto)                                               | 1/2025          | Core infrastructure data parsers\n[grpc](https://github.com/grpc/grpc)                                                           | 1/2025          | Core infrastructure data parsers\n[protoc_gen_validate](https://github.com/bufbuild/protoc-gen-validate)                         | 1/2025          | Core infrastructure data parsers\n[libpcap](https://github.com/the-tcpdump-group/libpcap)                                        | 1/2025          | Core infrastructure data parsers\n[libwebp](https://chromium.googlesource.com/webm/libwebp)                                      | 1/2025          | Core infrastructure data parsers\n[libgif](https://sourceforge.net/projects/giflib/)                                             | 1/2025          | Core infrastructure data parsers\n[libtiff](https://libtiff.gitlab.io/libtiff/)                                                  | 1/2025          | Core infrastructure data parsers\n[jpegxl](https://github.com/libjxl/libjxl)                                                     | 1/2025          | Core infrastructure data parsers\n[libvpx](https://www.webmproject.org/code/)                                                    | 1/2025          | Core infrastructure data parsers\n[libogg](https://gitlab.xiph.org/xiph/ogg)                                                     | 1/2025          | Core infrastructure data parsers\n[libavif](https://github.com/aomediacodec/libavif)                                             | 1/2025          | Core infrastructure data parsers\n[ffmpeg](https://git.ffmpeg.org/ffmpeg.git)                                                    | 1/2025          | Core infrastructure data parsers\n[Envoy proxy](https://www.envoyproxy.io/)                                                      | Prior to 1/2025 | Critical software used for cloud computing\n[xds](https://github.com/cncf/xds)                                                             | 1/2025          | Critical software used for cloud computing\n[Apache httpd](https://github.com/apache/httpd)                                                | Prior to 1/2025 | High-profile web and mail servers\n[lighttpd](https://git.lighttpd.net/lighttpd/lighttpd1.4)                                      | Prior to 1/2025 | High-profile web and mail servers\n[nginx](https://github.com/nginx/nginx)                                                        | Prior to 1/2025 | High-profile web and mail servers\n[Sendmail](https://www.proofpoint.com/us/products/email-protection/open-source-email-solution) | Prior to 1/2025 | High-profile web and mail servers\n[Postfix](https://www.postfix.org/)                                                            | Prior to 1/2025 | High-profile web and mail servers\n[Exim](https://github.com/Exim/exim)                                                           | Prior to 1/2025 | High-profile web and mail servers\n[Dovecot](https://github.com/dovecot/core)                                                     | Prior to 1/2025 | High-profile web and mail servers\n[Chromium](https://source.chromium.org/chromium/chromium/src)                                  | Prior to 1/2025 | Open source foundations of Chrome and Android\n[Blink](https://chromium.googlesource.com/chromium/src/+/HEAD/third_party/blink/)              | Prior to 1/2025 | Open source foundations of Chrome and Android\n[AOSP](http://source.android.com/)                                                             | Prior to 1/2025 | Open source foundations of Chrome and Android\n[OpenSSL](https://www.openssl.org/)                                                            | Prior to 1/2025 | Other essential libraries\n[Mozilla NSS](https://firefox-source-docs.mozilla.org/security/nss/index.html)                 | Prior to 1/2025 | Other essential libraries\n[Tink](https://developers.google.com/tink)                                                     | Prior to 1/2025 | Other essential libraries\n[highwayhash](https://github.com/google/highwayhash)                                           | 1/2025          | Other essential libraries\n[tz](https://github.com/eggert/tz)                                                             | 1/2025          | Other essential libraries\n[icu](https://github.com/unicode-org/icu)                                                      | 1/2025          | Other essential libraries\n[re2](https://github.com/google/re2)                                                           | 1/2025          | Other essential libraries\n[elfutils](https://sourceware.org/git/elfutils.git)                                            | 1/2025          | Other essential libraries\n[libzip](https://github.com/nih-at/libzip)                                                     | 1/2025          | Other essential libraries\n[lz4](https://github.com/lz4/lz4)                                                              | 1/2025          | Other essential libraries\n[tensorflow](https://github.com/tensorflow/tensorflow)                                         | 1/2025          | Other essential libraries\n[BoringSSL](https://boringssl.googlesource.com/boringssl)                                      | 1/2025          | Other essential libraries\n[nsjail](https://github.com/google/nsjail)                                                     | 7/2026          | Other essential libraries\n[OpenSSH](https://www.openssh.com/)                                                            | Prior to 1/2025 | Other high-impact network services\n[OpenVPN](https://openvpn.net/source-code/)                                                    | Prior to 1/2025 | Other high-impact network services\n[BIND](https://github.com/isc-projects/bind9)                                                  | Prior to 1/2025 | Other high-impact network services\n[ISC DHCP](https://github.com/isc-projects/dhcp)                                               | Prior to 1/2025 | Other high-impact network services\n[University of Delaware NTPD](https://github.com/ntp-project/ntp)                              | Prior to 1/2025 | Other high-impact network services\n[ares](https://github.com/c-ares/c-ares)                                                       | 1/2025          | Other high-impact network services\n[WordPress](https://wordpress.org/download/source/)                                            | Prior to 1/2025 | Popular CMS platforms\n[Joomla](https://github.com/joomla/joomla-cms)                                                 | Prior to 1/2025 | Popular CMS platforms\n[Drupal](https://github.com/drupal/drupal)                                                     | Prior to 1/2025 | Popular CMS platforms\n[Magento](https://github.com/magento/magento2)                                                 | Prior to 1/2025 | Popular CMS platforms\n[PrestaShop](https://github.com/PrestaShop/PrestaShop)                                         | Prior to 1/2025 | Popular CMS platforms\n[OpenCart](https://github.com/opencart/opencart)                                               | Prior to 1/2025 | Popular CMS platforms\n[Typo3](https://github.com/TYPO3/typo3)                                                        | Prior to 1/2025 | Popular CMS platforms\n[Angular](https://github.com/angular/angular)                                                  | Prior to 1/2025 | Popular web frameworks and libraries\n[Dart](https://github.com/dart-lang/sdk)                                                       | Prior to 1/2025 | Popular web frameworks and libraries\n[Django](https://github.com/django/django)                                                     | Prior to 1/2025 | Popular web frameworks and libraries\n[Dojo Toolkit](https://dojotoolkit.org/)                                                       | Prior to 1/2025 | Popular web frameworks and libraries\n[Ember](https://github.com/emberjs/ember.js)                                                   | Prior to 1/2025 | Popular web frameworks and libraries\n[GWT](https://github.com/gwtproject/gwt)                                                       | Prior to 1/2025 | Popular web frameworks and libraries\n[Go](https://github.com/golang/go)                                                             | Prior to 1/2025 | Popular web frameworks and libraries\n[Jinja](https://github.com/pallets/jinja)                                                      | Prior to 1/2025 | Popular web frameworks and libraries\n[Werkzeug](https://github.com/pallets/werkzeug)                                                | Prior to 1/2025 | Popular web frameworks and libraries\n[Flask](https://github.com/pallets/flask)                                                      | Prior to 1/2025 | Popular web frameworks and libraries\n[jQuery](https://github.com/jquery/jquery)                                                     | Prior to 1/2025 | Popular web frameworks and libraries\n[Knockout](https://github.com/knockout/knockout)                                               | Prior to 1/2025 | Popular web frameworks and libraries\n[Polymer](https://github.com/Polymer/polymer)                                                  | Prior to 1/2025 | Popular web frameworks and libraries\n[Struts](https://struts.apache.org/index.html)                                                 | Prior to 1/2025 | Popular web frameworks and libraries\n[Web2py](https://github.com/web2py/web2py)                                                     | Prior to 1/2025 | Popular web frameworks and libraries\n[Wicket](https://github.com/apache/wicket)                                                     | Prior to 1/2025 | Popular web frameworks and libraries\n[CiviForm](https://github.com/civiform/civiform)                                               | Prior to 1/2025 | Public-interest open source applications supported by Google.org\n[Linux kernel](https://github.com/torvalds/linux)                                              | Prior to 1/2025 | Security-critical, commonly used components of the Linux kernel (including KVM)\n[liburing](https://github.com/axboe/liburing)                                                  | 1/2025          | Security-critical, commonly used components of the Linux kernel (including KVM)\n[libcap](https://git.kernel.org/pub/scm/libs/libcap/libcap.git/)                               | 1/2025          | Security-critical, commonly used components of the Linux kernel (including KVM)\n[yum](http://yum.baseurl.org/)                                                                 | Prior to 1/2025 | Security-relevant bits of common package managers\n[apt](https://salsa.debian.org/apt-team/apt)                                                   | Prior to 1/2025 | Security-relevant bits of common package managers\n[pip](https://github.com/pypa/pip)                                                             | Prior to 1/2025 | Security-relevant bits of common package managers\n[npm](https://github.com/npm/cli)                                                              | Prior to 1/2025 | Security-relevant bits of common package managers\n[GCC](https://gcc.gnu.org/)                                                                    | Prior to 1/2025 | Toolchain security improvements\n[binutils](https://www.gnu.org/software/binutils/)                                             | Prior to 1/2025 | Toolchain security improvements\n[llvm](https://llvm.org/)                                                                      | Prior to 1/2025 | Toolchain security improvements\n[bzip2](https://gitlab.com/bzip2/bzip2/)                                                       | Prior to 1/2025 | Widespread decompression libraries\n[tar](https://www.gnu.org/software/tar/)                                                       | Prior to 1/2025 | Widespread decompression libraries\n[gzip](https://www.gnu.org/software/gzip/)                                                     | Prior to 1/2025 | Widespread decompression libraries\n[cpio](https://www.gnu.org/software/cpio/)                                                     | Prior to 1/2025 | Widespread decompression libraries\n[xz](https://github.com/tukaani-project/xz)                                                    | Prior to 1/2025 | Widespread decompression libraries\n[7z](https://www.7-zip.org/)                                                                   | Prior to 1/2025 | Widespread decompression libraries\n[p7zip](https://p7zip.sourceforge.net/)                                                        | Prior to 1/2025 | Widespread decompression libraries\n[ncompress](https://vapier.github.io/ncompress/)                                               | Prior to 1/2025 | Widespread decompression libraries\n[lzo](https://www.oberhumer.com/opensource/lzo/)                                               | Prior to 1/2025 | Widespread decompression libraries\n[zstdlib](https://github.com/facebook/zstd)                                                    | 1/2025          | Widespread decompression libraries\n[bz2lib](https://sourceware.org/git/bzip2.git)                                                 | 1/2025          | Widespread decompression libraries\n\n## Tier 2\n\n-   [Projects integrated into OSS-Fuzz](https://github.com/google/oss-fuzz/tree/master/projects)\n"
+  },
+  "projects": [
+    {
+      "name": "7z",
+      "url": "https://www.7-zip.org/",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "Widespread decompression libraries",
+      "kind": "project"
+    },
+    {
+      "name": "Angular",
+      "url": "https://github.com/angular/angular",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "Popular web frameworks and libraries",
+      "kind": "project"
+    },
+    {
+      "name": "AOSP",
+      "url": "http://source.android.com/",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "Open source foundations of Chrome and Android",
+      "kind": "project"
+    },
+    {
+      "name": "Apache httpd",
+      "url": "https://github.com/apache/httpd",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "High-profile web and mail servers",
+      "kind": "project"
+    },
+    {
+      "name": "apt",
+      "url": "https://salsa.debian.org/apt-team/apt",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "Security-relevant bits of common package managers",
+      "kind": "project"
+    },
+    {
+      "name": "ares",
+      "url": "https://github.com/c-ares/c-ares",
+      "tier": 1,
+      "monthAdded": "1/2025",
+      "area": "Other high-impact network services",
+      "kind": "project"
+    },
+    {
+      "name": "BIND",
+      "url": "https://github.com/isc-projects/bind9",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "Other high-impact network services",
+      "kind": "project"
+    },
+    {
+      "name": "binutils",
+      "url": "https://www.gnu.org/software/binutils/",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "Toolchain security improvements",
+      "kind": "project"
+    },
+    {
+      "name": "Blink",
+      "url": "https://chromium.googlesource.com/chromium/src/+/HEAD/third_party/blink/",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "Open source foundations of Chrome and Android",
+      "kind": "project"
+    },
+    {
+      "name": "BoringSSL",
+      "url": "https://boringssl.googlesource.com/boringssl",
+      "tier": 1,
+      "monthAdded": "1/2025",
+      "area": "Other essential libraries",
+      "kind": "project"
+    },
+    {
+      "name": "bz2lib",
+      "url": "https://sourceware.org/git/bzip2.git",
+      "tier": 1,
+      "monthAdded": "1/2025",
+      "area": "Widespread decompression libraries",
+      "kind": "project"
+    },
+    {
+      "name": "bzip2",
+      "url": "https://gitlab.com/bzip2/bzip2/",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "Widespread decompression libraries",
+      "kind": "project"
+    },
+    {
+      "name": "Chromium",
+      "url": "https://source.chromium.org/chromium/chromium/src",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "Open source foundations of Chrome and Android",
+      "kind": "project"
+    },
+    {
+      "name": "CiviForm",
+      "url": "https://github.com/civiform/civiform",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "Public-interest open source applications supported by Google.org",
+      "kind": "project"
+    },
+    {
+      "name": "cpio",
+      "url": "https://www.gnu.org/software/cpio/",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "Widespread decompression libraries",
+      "kind": "project"
+    },
+    {
+      "name": "Dart",
+      "url": "https://github.com/dart-lang/sdk",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "Popular web frameworks and libraries",
+      "kind": "project"
+    },
+    {
+      "name": "Django",
+      "url": "https://github.com/django/django",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "Popular web frameworks and libraries",
+      "kind": "project"
+    },
+    {
+      "name": "Dojo Toolkit",
+      "url": "https://dojotoolkit.org/",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "Popular web frameworks and libraries",
+      "kind": "project"
+    },
+    {
+      "name": "Dovecot",
+      "url": "https://github.com/dovecot/core",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "High-profile web and mail servers",
+      "kind": "project"
+    },
+    {
+      "name": "Drupal",
+      "url": "https://github.com/drupal/drupal",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "Popular CMS platforms",
+      "kind": "project"
+    },
+    {
+      "name": "elfutils",
+      "url": "https://sourceware.org/git/elfutils.git",
+      "tier": 1,
+      "monthAdded": "1/2025",
+      "area": "Other essential libraries",
+      "kind": "project"
+    },
+    {
+      "name": "Ember",
+      "url": "https://github.com/emberjs/ember.js",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "Popular web frameworks and libraries",
+      "kind": "project"
+    },
+    {
+      "name": "Envoy proxy",
+      "url": "https://www.envoyproxy.io/",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "Critical software used for cloud computing",
+      "kind": "project"
+    },
+    {
+      "name": "Exim",
+      "url": "https://github.com/Exim/exim",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "High-profile web and mail servers",
+      "kind": "project"
+    },
+    {
+      "name": "ffmpeg",
+      "url": "https://git.ffmpeg.org/ffmpeg.git",
+      "tier": 1,
+      "monthAdded": "1/2025",
+      "area": "Core infrastructure data parsers",
+      "kind": "project"
+    },
+    {
+      "name": "Flask",
+      "url": "https://github.com/pallets/flask",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "Popular web frameworks and libraries",
+      "kind": "project"
+    },
+    {
+      "name": "flatbuffers",
+      "url": "https://github.com/google/flatbuffers",
+      "tier": 1,
+      "monthAdded": "1/2025",
+      "area": "Core infrastructure data parsers",
+      "kind": "project"
+    },
+    {
+      "name": "GCC",
+      "url": "https://gcc.gnu.org/",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "Toolchain security improvements",
+      "kind": "project"
+    },
+    {
+      "name": "giflib",
+      "url": "https://giflib.sourceforge.net/",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "Core infrastructure data parsers",
+      "kind": "project"
+    },
+    {
+      "name": "Go",
+      "url": "https://github.com/golang/go",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "Popular web frameworks and libraries",
+      "kind": "project"
+    },
+    {
+      "name": "grpc",
+      "url": "https://github.com/grpc/grpc",
+      "tier": 1,
+      "monthAdded": "1/2025",
+      "area": "Core infrastructure data parsers",
+      "kind": "project"
+    },
+    {
+      "name": "grpc_proto",
+      "url": "https://github.com/grpc/grpc-proto",
+      "tier": 1,
+      "monthAdded": "1/2025",
+      "area": "Core infrastructure data parsers",
+      "kind": "project"
+    },
+    {
+      "name": "GWT",
+      "url": "https://github.com/gwtproject/gwt",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "Popular web frameworks and libraries",
+      "kind": "project"
+    },
+    {
+      "name": "gzip",
+      "url": "https://www.gnu.org/software/gzip/",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "Widespread decompression libraries",
+      "kind": "project"
+    },
+    {
+      "name": "highwayhash",
+      "url": "https://github.com/google/highwayhash",
+      "tier": 1,
+      "monthAdded": "1/2025",
+      "area": "Other essential libraries",
+      "kind": "project"
+    },
+    {
+      "name": "icu",
+      "url": "https://github.com/unicode-org/icu",
+      "tier": 1,
+      "monthAdded": "1/2025",
+      "area": "Other essential libraries",
+      "kind": "project"
+    },
+    {
+      "name": "ISC DHCP",
+      "url": "https://github.com/isc-projects/dhcp",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "Other high-impact network services",
+      "kind": "project"
+    },
+    {
+      "name": "Jinja",
+      "url": "https://github.com/pallets/jinja",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "Popular web frameworks and libraries",
+      "kind": "project"
+    },
+    {
+      "name": "Joomla",
+      "url": "https://github.com/joomla/joomla-cms",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "Popular CMS platforms",
+      "kind": "project"
+    },
+    {
+      "name": "jpegxl",
+      "url": "https://github.com/libjxl/libjxl",
+      "tier": 1,
+      "monthAdded": "1/2025",
+      "area": "Core infrastructure data parsers",
+      "kind": "project"
+    },
+    {
+      "name": "jQuery",
+      "url": "https://github.com/jquery/jquery",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "Popular web frameworks and libraries",
+      "kind": "project"
+    },
+    {
+      "name": "Knockout",
+      "url": "https://github.com/knockout/knockout",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "Popular web frameworks and libraries",
+      "kind": "project"
+    },
+    {
+      "name": "libavif",
+      "url": "https://github.com/aomediacodec/libavif",
+      "tier": 1,
+      "monthAdded": "1/2025",
+      "area": "Core infrastructure data parsers",
+      "kind": "project"
+    },
+    {
+      "name": "libcap",
+      "url": "https://git.kernel.org/pub/scm/libs/libcap/libcap.git/",
+      "tier": 1,
+      "monthAdded": "1/2025",
+      "area": "Security-critical, commonly used components of the Linux kernel (including KVM)",
+      "kind": "project"
+    },
+    {
+      "name": "libgif",
+      "url": "https://sourceforge.net/projects/giflib/",
+      "tier": 1,
+      "monthAdded": "1/2025",
+      "area": "Core infrastructure data parsers",
+      "kind": "project"
+    },
+    {
+      "name": "libjpeg",
+      "url": "https://libjpeg.sourceforge.net/",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "Core infrastructure data parsers",
+      "kind": "project"
+    },
+    {
+      "name": "libjpeg-turbo",
+      "url": "https://github.com/libjpeg-turbo/libjpeg-turbo",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "Core infrastructure data parsers",
+      "kind": "project"
+    },
+    {
+      "name": "libogg",
+      "url": "https://gitlab.xiph.org/xiph/ogg",
+      "tier": 1,
+      "monthAdded": "1/2025",
+      "area": "Core infrastructure data parsers",
+      "kind": "project"
+    },
+    {
+      "name": "libpcap",
+      "url": "https://github.com/the-tcpdump-group/libpcap",
+      "tier": 1,
+      "monthAdded": "1/2025",
+      "area": "Core infrastructure data parsers",
+      "kind": "project"
+    },
+    {
+      "name": "libpng",
+      "url": "https://github.com/pnggroup/libpng",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "Core infrastructure data parsers",
+      "kind": "project"
+    },
+    {
+      "name": "libtiff",
+      "url": "https://libtiff.gitlab.io/libtiff/",
+      "tier": 1,
+      "monthAdded": "1/2025",
+      "area": "Core infrastructure data parsers",
+      "kind": "project"
+    },
+    {
+      "name": "liburing",
+      "url": "https://github.com/axboe/liburing",
+      "tier": 1,
+      "monthAdded": "1/2025",
+      "area": "Security-critical, commonly used components of the Linux kernel (including KVM)",
+      "kind": "project"
+    },
+    {
+      "name": "libvpx",
+      "url": "https://www.webmproject.org/code/",
+      "tier": 1,
+      "monthAdded": "1/2025",
+      "area": "Core infrastructure data parsers",
+      "kind": "project"
+    },
+    {
+      "name": "libwebp",
+      "url": "https://chromium.googlesource.com/webm/libwebp",
+      "tier": 1,
+      "monthAdded": "1/2025",
+      "area": "Core infrastructure data parsers",
+      "kind": "project"
+    },
+    {
+      "name": "libxml2",
+      "url": "https://gitlab.gnome.org/GNOME/libxml2",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "Core infrastructure data parsers",
+      "kind": "project"
+    },
+    {
+      "name": "libzip",
+      "url": "https://github.com/nih-at/libzip",
+      "tier": 1,
+      "monthAdded": "1/2025",
+      "area": "Other essential libraries",
+      "kind": "project"
+    },
+    {
+      "name": "lighttpd",
+      "url": "https://git.lighttpd.net/lighttpd/lighttpd1.4",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "High-profile web and mail servers",
+      "kind": "project"
+    },
+    {
+      "name": "Linux kernel",
+      "url": "https://github.com/torvalds/linux",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "Security-critical, commonly used components of the Linux kernel (including KVM)",
+      "kind": "project"
+    },
+    {
+      "name": "llvm",
+      "url": "https://llvm.org/",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "Toolchain security improvements",
+      "kind": "project"
+    },
+    {
+      "name": "lz4",
+      "url": "https://github.com/lz4/lz4",
+      "tier": 1,
+      "monthAdded": "1/2025",
+      "area": "Other essential libraries",
+      "kind": "project"
+    },
+    {
+      "name": "lzo",
+      "url": "https://www.oberhumer.com/opensource/lzo/",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "Widespread decompression libraries",
+      "kind": "project"
+    },
+    {
+      "name": "Magento",
+      "url": "https://github.com/magento/magento2",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "Popular CMS platforms",
+      "kind": "project"
+    },
+    {
+      "name": "Mozilla NSS",
+      "url": "https://firefox-source-docs.mozilla.org/security/nss/index.html",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "Other essential libraries",
+      "kind": "project"
+    },
+    {
+      "name": "ncompress",
+      "url": "https://vapier.github.io/ncompress/",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "Widespread decompression libraries",
+      "kind": "project"
+    },
+    {
+      "name": "nginx",
+      "url": "https://github.com/nginx/nginx",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "High-profile web and mail servers",
+      "kind": "project"
+    },
+    {
+      "name": "npm",
+      "url": "https://github.com/npm/cli",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "Security-relevant bits of common package managers",
+      "kind": "project"
+    },
+    {
+      "name": "nsjail",
+      "url": "https://github.com/google/nsjail",
+      "tier": 1,
+      "monthAdded": "7/2026",
+      "area": "Other essential libraries",
+      "kind": "project"
+    },
+    {
+      "name": "OpenCart",
+      "url": "https://github.com/opencart/opencart",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "Popular CMS platforms",
+      "kind": "project"
+    },
+    {
+      "name": "OpenSSH",
+      "url": "https://www.openssh.com/",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "Other high-impact network services",
+      "kind": "project"
+    },
+    {
+      "name": "OpenSSL",
+      "url": "https://www.openssl.org/",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "Other essential libraries",
+      "kind": "project"
+    },
+    {
+      "name": "OpenVPN",
+      "url": "https://openvpn.net/source-code/",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "Other high-impact network services",
+      "kind": "project"
+    },
+    {
+      "name": "p7zip",
+      "url": "https://p7zip.sourceforge.net/",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "Widespread decompression libraries",
+      "kind": "project"
+    },
+    {
+      "name": "pip",
+      "url": "https://github.com/pypa/pip",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "Security-relevant bits of common package managers",
+      "kind": "project"
+    },
+    {
+      "name": "Polymer",
+      "url": "https://github.com/Polymer/polymer",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "Popular web frameworks and libraries",
+      "kind": "project"
+    },
+    {
+      "name": "Postfix",
+      "url": "https://www.postfix.org/",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "High-profile web and mail servers",
+      "kind": "project"
+    },
+    {
+      "name": "PrestaShop",
+      "url": "https://github.com/PrestaShop/PrestaShop",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "Popular CMS platforms",
+      "kind": "project"
+    },
+    {
+      "name": "protobuf",
+      "url": "https://github.com/protocolbuffers/protobuf",
+      "tier": 1,
+      "monthAdded": "1/2025",
+      "area": "Core infrastructure data parsers",
+      "kind": "project"
+    },
+    {
+      "name": "protoc_gen_validate",
+      "url": "https://github.com/bufbuild/protoc-gen-validate",
+      "tier": 1,
+      "monthAdded": "1/2025",
+      "area": "Core infrastructure data parsers",
+      "kind": "project"
+    },
+    {
+      "name": "re2",
+      "url": "https://github.com/google/re2",
+      "tier": 1,
+      "monthAdded": "1/2025",
+      "area": "Other essential libraries",
+      "kind": "project"
+    },
+    {
+      "name": "Sendmail",
+      "url": "https://www.proofpoint.com/us/products/email-protection/open-source-email-solution",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "High-profile web and mail servers",
+      "kind": "project"
+    },
+    {
+      "name": "Struts",
+      "url": "https://struts.apache.org/index.html",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "Popular web frameworks and libraries",
+      "kind": "project"
+    },
+    {
+      "name": "tar",
+      "url": "https://www.gnu.org/software/tar/",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "Widespread decompression libraries",
+      "kind": "project"
+    },
+    {
+      "name": "tensorflow",
+      "url": "https://github.com/tensorflow/tensorflow",
+      "tier": 1,
+      "monthAdded": "1/2025",
+      "area": "Other essential libraries",
+      "kind": "project"
+    },
+    {
+      "name": "Tink",
+      "url": "https://developers.google.com/tink",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "Other essential libraries",
+      "kind": "project"
+    },
+    {
+      "name": "Typo3",
+      "url": "https://github.com/TYPO3/typo3",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "Popular CMS platforms",
+      "kind": "project"
+    },
+    {
+      "name": "tz",
+      "url": "https://github.com/eggert/tz",
+      "tier": 1,
+      "monthAdded": "1/2025",
+      "area": "Other essential libraries",
+      "kind": "project"
+    },
+    {
+      "name": "University of Delaware NTPD",
+      "url": "https://github.com/ntp-project/ntp",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "Other high-impact network services",
+      "kind": "project"
+    },
+    {
+      "name": "Web2py",
+      "url": "https://github.com/web2py/web2py",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "Popular web frameworks and libraries",
+      "kind": "project"
+    },
+    {
+      "name": "Werkzeug",
+      "url": "https://github.com/pallets/werkzeug",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "Popular web frameworks and libraries",
+      "kind": "project"
+    },
+    {
+      "name": "Wicket",
+      "url": "https://github.com/apache/wicket",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "Popular web frameworks and libraries",
+      "kind": "project"
+    },
+    {
+      "name": "WordPress",
+      "url": "https://wordpress.org/download/source/",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "Popular CMS platforms",
+      "kind": "project"
+    },
+    {
+      "name": "xds",
+      "url": "https://github.com/cncf/xds",
+      "tier": 1,
+      "monthAdded": "1/2025",
+      "area": "Critical software used for cloud computing",
+      "kind": "project"
+    },
+    {
+      "name": "xz",
+      "url": "https://github.com/tukaani-project/xz",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "Widespread decompression libraries",
+      "kind": "project"
+    },
+    {
+      "name": "yum",
+      "url": "http://yum.baseurl.org/",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "Security-relevant bits of common package managers",
+      "kind": "project"
+    },
+    {
+      "name": "zlib",
+      "url": "https://zlib.net/",
+      "tier": 1,
+      "monthAdded": "Prior to 1/2025",
+      "area": "Core infrastructure data parsers",
+      "kind": "project"
+    },
+    {
+      "name": "zstdlib",
+      "url": "https://github.com/facebook/zstd",
+      "tier": 1,
+      "monthAdded": "1/2025",
+      "area": "Widespread decompression libraries",
+      "kind": "project"
+    },
+    {
+      "name": "Projects integrated into OSS-Fuzz",
+      "url": "https://github.com/google/oss-fuzz/tree/master/projects",
+      "tier": 2,
+      "monthAdded": null,
+      "area": "Collection defined by the official scope source",
+      "kind": "collection"
+    }
+  ],
+  "limitations": [
+    "A named project proves program scope only; it does not prove a proposed patch is eligible.",
+    "Reward amounts and multipliers are published ceilings, not expected or earned revenue.",
+    "The official program rules must be checked again before an external pull request or reward submission."
+  ]
+}

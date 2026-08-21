@@ -1,0 +1,26 @@
+{
+  "name": "patch-lab",
+  "version": "0.2.0",
+  "type": "module",
+  "description": "Deterministic evidence and qualification for platform migrations and authorized security-patch work.",
+  "license": "Apache-2.0",
+  "author": "Timothy Sullivan",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sulmusic2-star/patch-lab.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sulmusic2-star/patch-lab/issues"
+  },
+  "homepage": "https://github.com/sulmusic2-star/patch-lab#readme",
+  "bin": {
+    "patchlab": "src/cli.mjs"
+  },
+  "scripts": {
+    "test": "node --test",
+    "scan": "node src/cli.mjs scan"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
