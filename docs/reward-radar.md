@@ -1,10 +1,10 @@
-# Reward Radar and the larger-money path
+# Reward Radar: scope, ranking and limits
 
 Policy snapshot: **2026-08-20**
 
-## What Patch Lab is optimizing
+## Program selection
 
-Patch Lab is not a general promise that any useful patch earns money. It targets programs with an official payer, published scope, published submission path and meaningful reward schedule. The first program is Google Open Source Security Patch Rewards because it pays for proactive security improvements to open-source projects rather than requiring a sales process.
+Patch Lab records programs with an official payer, published scope, submission instructions and a reward schedule. The first program is Google Open Source Security Patch Rewards because it pays for proactive security improvements to open-source projects rather than requiring a sales process.
 
 Official sources:
 
@@ -14,23 +14,23 @@ Official sources:
 - [Microsoft bounty programs](https://www.microsoft.com/en-us/msrc/bounty-programs)
 - [Apple Security Bounty](https://security.apple.com/bounty/)
 
-## Revenue ladder
+## Program types
 
-### Lane 1 — proactive merged patches
+### Proactive merged patches
 
 Google publishes four base categories for tier 1 patches: $500, $2,000, $7,500 and $15,000. It also publishes temporary 2× and 3× multipliers for qualifying secure-by-design memory-safety work through the end of 2026. A displayed $30,000 or $45,000 number is arithmetic applied to the published policy, not a prediction that a patch will qualify or be paid.
 
 This is the repeatable starting lane because research can begin from public source without sales outreach. The maintainer still has to accept the work, and Google still decides eligibility and amount.
 
-### Lane 2 — vulnerability reports in open source
+### Vulnerability reports in open source
 
 Google's OSS VRP publishes awards up to $31,337 for certain tier 0 supply-chain compromises and up to $7,500 for certain flagship product vulnerabilities. Microsoft publishes up to $15,000 for selected open-source vulnerabilities. These lanes can pay more per discovery than an ordinary patch but require a reproducible security impact, first-report status and coordinated disclosure.
 
-### Lane 3 — high-impact platform research
+### Platform security research
 
-Google, Microsoft, Meta and Apple publish six- and seven-figure maximums for high-impact product vulnerabilities and exploit chains. Those amounts are real program ceilings, but they require specialist research and are not the starting forecast. Patch Lab earns the right to enter this lane only after producing accepted open-source security work and a clean disclosure record.
+Google, Microsoft, Meta and Apple publish six- and seven-figure maximums for high-impact product vulnerabilities and exploit chains. Those amounts are real program ceilings, but they require specialist research and are not the starting forecast. Research at that level would require relevant experience and a reliable disclosure process.
 
-### Lane 4 — product revenue after proof
+### Possible product work
 
 After at least five accepted or rewarded patches, the deterministic radar, evidence ledger and local proof workflow may be packaged for maintainers or research teams through self-serve developer distribution. Pricing and recurring-revenue claims remain unset until outside users demonstrate demand.
 
@@ -71,4 +71,4 @@ A candidate may enter local triage only when:
 - Stop a lane after three technically sound candidates are rejected as duplicates, out of scope or unwanted for the same reason.
 - Do not forecast revenue until a program confirms eligibility; do not record revenue until payment settles.
 
-The first month may produce no payment because merge, disclosure and reward review take time. The near-term proof is an accepted patch, not a million-dollar projection.
+The first month may produce no payment because merge, disclosure and reward review take time. An accepted patch would be the first useful milestone.

@@ -1,13 +1,12 @@
 # Patch Lab
 
-Deterministic evidence for authorized security-patch work and platform
-migrations.
+Local checks for authorized security-patch work and platform migrations.
 
-Patch Lab is a local evidence engine for authorized repository work. Reward Radar records official security-patch programs, ranks their published opportunity ceilings and blocks candidate work until scope and repository identity are proven. It is read-only: it does not execute target code, probe live services, publish a pull request, disclose a vulnerability, submit a reward claim or edit a repository it scans.
+Patch Lab inspects a local repository and reports what its files establish. Reward Radar records official security-patch programs, ranks their published opportunity ceilings and blocks candidate work until scope and repository identity are proven. It is read-only: it does not execute target code, probe live services, publish a pull request, disclose a vulnerability, submit a reward claim or edit a repository it scans.
 
-The first reward adapter is **Google Open Source Security Patch Rewards**. It refreshes Google's named scope from a hard-coded official URL, records the retrieval time and SHA-256 digest, identifies the published reward boundary and produces a fail-closed qualification dossier.
+The first reward adapter is **Google Open Source Security Patch Rewards**. It refreshes Google's named scope from a hard-coded official URL, records the retrieval time and SHA-256 digest, identifies the published reward boundary and produces a qualification report that stops when required information is missing.
 
-The first evidence pack remains **HubSpot Version Proof**. It demonstrates the underlying file-level evidence system; it is no longer the primary commercial plan.
+The **HubSpot Version Proof** pack checks repository files against published platform requirements.
 
 ## Run it
 
@@ -53,7 +52,7 @@ This is not a HubSpot schema validator. HubSpot already provides `hs project lin
 
 This is a public alpha. Passing tests, scope receipts and candidate dossiers are engineering proof, not proof of a vulnerability, eligible patch, merger, submission, bounty, payment, customer, production outage or safe production deployment.
 
-The reward method and larger-money path are in [docs/reward-radar.md](docs/reward-radar.md). Security invariants are in [SECURITY.md](SECURITY.md). The original evidence method is in [docs/method.md](docs/method.md), and the HubSpot checks remain in [docs/hubspot-policy-register.md](docs/hubspot-policy-register.md).
+The reward method and its limits are in [docs/reward-radar.md](docs/reward-radar.md). Security invariants are in [SECURITY.md](SECURITY.md). The original evidence method is in [docs/method.md](docs/method.md), and the HubSpot checks remain in [docs/hubspot-policy-register.md](docs/hubspot-policy-register.md).
 
 ## Contributing and security
 
